@@ -39,8 +39,8 @@ def convertToGrayScale(img, img2):
     for i in range(width):
         for j in range(height):
             xy = (i,j)
-            img2.putpixel(xy,(int(img[i,j][2] * 0.2988),int(img[i,j][1] * 0.5870),int(img[i,j][0]*0.1140)))
-           
+            img2.putpixel(xy,(int(img[i,j][0] * 0.2988),int(img[i,j][1] * 0.5870),int(img[i,j][2]*0.1140)))
+            print(int(img[i,j][0] * 0.2988),int(img[i,j][1] * 0.5870),int(img[i,j][2]*0.1140))
 
 
 #TODO: function to calculate percentage of each color in mm.jpg
@@ -159,19 +159,19 @@ def calculatePercentage(img):
 
 #function call to get resulting image
 
-# combineImages(imageKidGreen, image_beach)
-# imageOutput.save("output.png","png")
+combineImages(imageKidGreen, image_beach)
+imageOutput.save("output.png","png")
 
-# image_combined = Image.open("output.png").load()
-# imageOutput2 = Image.open("kid-green.jpg")
-# convertToGrayScale(image_combined,imageOutput2)
-# imageOutput2.save("gray.png","png")
+image_combined = Image.open("output.png").load()
+imageOutput2 = Image.open("kid-green.jpg")
+convertToGrayScale(image_combined,imageOutput2)
+imageOutput2.save("gray.png","png")
 
-mmImg = Image.open("mm.jpg").load()
-imageOutput3 = Image.open("kid-green.jpg")
+# mmImg = Image.open("mm.jpg").load()
+# imageOutput3 = Image.open("kid-green.jpg")
 
-width_mm = imageOutput3.width
-height_mm = imageOutput3.height
+# width_mm = imageOutput3.width
+# height_mm = imageOutput3.height
 # print(width_mm, height_mm)
 
-calculatePercentage(mmImg)
+# calculatePercentage(mmImg)

@@ -29,11 +29,13 @@ result = linearSearch(arr, 54)
        target'''
 
 sortedArr = sorted(arr)
-#print(sortedArr)
+print(sortedArr)
 #mid = len(sortedArr) // 2
 
-#TODO: sort algorithms
 
+
+
+#TODO: sort algorithms
 '''Selection Sort: find min in the given array, put it in a new array.
     then, keep finding the min in input array and append it to the resule 
     array. until finish'''
