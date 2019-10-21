@@ -35,3 +35,6 @@ sortedDataByLetter = sortModule.bubbleSort2D(theData,1)
 
 for each in sortedDataByLetter:
   print("{:<10}{:<20}".format(each[0], each[2]))
+
+#TODO: sort by multiple data
+#Need to change sorting function
